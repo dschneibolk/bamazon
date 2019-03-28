@@ -55,7 +55,7 @@ function start() {
           if (chosenItem.quantity < parseInt(response.quantity)) {
               console.log("Insufficient quantity!");
 
-              repurchase();
+            
           } else {
               connection.query("UPDATE products SET ? WHERE ?", [{quantity: updateQuant}, {item_id: chosenItem.item_id}], function(err, res) {
                   console.log("Purchase successful!");
